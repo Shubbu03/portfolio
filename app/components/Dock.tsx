@@ -85,7 +85,6 @@ export default function Dock() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const isDarkMode = theme === "dark";
   const iconSize = 20;
 
   return (
@@ -132,7 +131,7 @@ export default function Dock() {
         <DockButton
           onClick={toggleTheme}
           icon={
-            isDarkMode ? (
+            theme === "dark" ? (
               <IconSun size={iconSize} strokeWidth={1.5} />
             ) : (
               <IconMoon size={iconSize} strokeWidth={1.5} />
