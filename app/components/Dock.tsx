@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import {
   IconHome,
-  IconNotebook,
   IconBrandGithub,
   IconBriefcase,
   IconBrandX,
   IconMail,
   IconMoon,
   IconSun,
+  IconBallpen,
 } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
 
@@ -98,7 +98,7 @@ export default function Dock() {
         <DockLink
           href="/blogs"
           label="Blog"
-          icon={<IconNotebook size={iconSize} strokeWidth={1.75} />}
+          icon={<IconBallpen size={iconSize} strokeWidth={1.75} />}
         />
         <DockLink
           href="/projects"
