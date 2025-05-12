@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   IconHome,
   IconNotebook,
@@ -80,17 +80,12 @@ const Separator: React.FC = () => (
 
 export default function Dock() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const isDarkMode = mounted && theme === "dark";
+  const isDarkMode = theme === "dark";
   const iconSize = 20;
 
   return (
