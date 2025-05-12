@@ -93,7 +93,7 @@ export default function Landing() {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-gray-200 dark:bg-gray-800 rounded-full text-xs sm:text-sm text-gray-800 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 hover:scale-110 hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-gray-200 dark:bg-gray-800 rounded-full text-xs sm:text-sm text-gray-800 dark:text-gray-200 hover:bg-blue-200 dark:hover:bg-blue-900 hover:scale-110 hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               {skill}
             </span>
