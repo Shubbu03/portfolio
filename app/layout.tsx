@@ -33,7 +33,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          {children}
+          <main className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black text-black dark:text-white font-mono transition-colors duration-300 select-none">
+            {children}
+          </main>
           <Dock />
         </ThemeProvider>
       </body>
