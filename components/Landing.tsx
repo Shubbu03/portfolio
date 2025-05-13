@@ -43,7 +43,7 @@ export default function Landing() {
         <h2 className="text-lg sm:text-xl font-semibold mb-2">About</h2>
         <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
           Always curious, always building. Big fan of web dev, blockchains, and
-          the whole Solana scene. Just tryna be get 1% better every day and have
+          the whole Solana scene. Just tryna be 1% better every day and have
           fun along the way.
         </p>
       </div>
