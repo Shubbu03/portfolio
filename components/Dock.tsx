@@ -97,7 +97,7 @@ export default function Dock() {
         />
         <DockLink
           href="/blogs"
-          label="Blog"
+          label="Blogs"
           icon={<IconBallpen size={iconSize} strokeWidth={1.75} />}
         />
         <DockLink
