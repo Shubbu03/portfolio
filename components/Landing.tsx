@@ -5,7 +5,7 @@ export default function Landing() {
     <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 flex flex-col items-center">
       <div className="flex flex-col items-center mb-8">
         <div className="w-32 h-32 rounded-full overflow-visible relative group cursor-pointer mb-5">
-          <div className="w-full h-full rounded-full overflow-hidden transition-all duration-300 border-2 border-transparent group-hover:border-gray-300 dark:group-hover:border-gray-600">
+          <div className="w-full h-full rounded-full overflow-hidden transition-all duration-300 border-2 border-transparent group-hover:border-gray-400 dark:group-hover:border-gray-600">
             <Image
               src="/pfp.jpg"
               alt="Profile"

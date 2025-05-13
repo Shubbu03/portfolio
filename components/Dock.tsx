@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   IconHome,
   IconBrandGithub,
@@ -29,7 +29,6 @@ const DockLink: React.FC<DockLinkProps> = ({
   rel,
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
-
   return (
     <div className="relative group">
       <a
@@ -54,25 +53,21 @@ const DockLink: React.FC<DockLinkProps> = ({
   );
 };
 
-interface DockButtonProps {
-  onClick: () => void;
-  icon: React.ReactNode;
-}
-
-const DockButton: React.FC<DockButtonProps> = ({ onClick, icon }) => {
-  return (
-    <div className="relative group">
-      <button
-        onClick={onClick}
-        className="p-2 text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center"
-      >
-        <div className="transform transition-transform duration-200 group-hover:scale-125 cursor-pointer">
-          {icon}
-        </div>
-      </button>
-    </div>
-  );
-};
+const DockButton: React.FC<{ onClick: () => void; icon: React.ReactNode }> = ({
+  onClick,
+  icon,
+}) => (
+  <div className="relative group">
+    <button
+      onClick={onClick}
+      className="p-2 text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center"
+    >
+      <div className="transform transition-transform duration-200 group-hover:scale-125 cursor-pointer">
+        {icon}
+      </div>
+    </button>
+  </div>
+);
 
 const Separator: React.FC = () => (
   <div className="h-6 w-px bg-gray-300/60 dark:bg-gray-600/70"></div>
@@ -80,11 +75,15 @@ const Separator: React.FC = () => (
 
 export default function Dock() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+  if (!mounted) return null;
+
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
   const iconSize = 20;
 
   return (
@@ -105,9 +104,7 @@ export default function Dock() {
           label="Projects"
           icon={<IconBriefcase size={iconSize} strokeWidth={1.75} />}
         />
-
         <Separator />
-
         <DockLink
           href="https://github.com/Shubbu03"
           label="Github"
@@ -125,9 +122,7 @@ export default function Dock() {
           label="Email"
           icon={<IconMail size={iconSize} strokeWidth={1.75} />}
         />
-
         <Separator />
-
         <DockButton
           onClick={toggleTheme}
           icon={
