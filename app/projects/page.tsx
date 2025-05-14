@@ -14,6 +14,14 @@ export default function Projects() {
       tags: ["Next.js", "Supabase", "Second-brain"],
     },
     {
+      title: "Carta",
+      description:
+        "A free writing tool — just let your thoughts flow. No structure, no rules — write whatever's on your mind.",
+      liveLink: "https://carta.shubbu.dev/",
+      githubLink: "https://github.com/Shubbu03/carta",
+      tags: ["Next.js", "Mongodb", "Free writing"],
+    },
+    {
       title: "Tick",
       description:
         "A subscription tracker app to manage all your subscriptions in one place. Track expenses, visualize your spending habits and categorize them easily.",
