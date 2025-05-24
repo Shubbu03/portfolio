@@ -11,7 +11,7 @@ export default function Projects() {
         "Your second brain, where all your thoughts live together. Organize notes, collect links, and never lose an idea again.",
       liveLink: "https://cerebero.shubbu.dev/",
       githubLink: "https://github.com/Shubbu03/cerebero",
-      tags: ["Next.js", "Supabase", "Second-brain"],
+      tags: ["Next.js", "Supabase", "Second brain"],
     },
     {
       title: "Carta",
@@ -28,7 +28,7 @@ export default function Projects() {
       liveLink:
         "https://chromewebstore.google.com/detail/smartseek/doldnfpemfpehgoocdfnimnlndgjjpda",
       githubLink: "https://github.com/Shubbu03/smartseek-ext",
-      tags: ["React", "WXT", "Chrome Extension"],
+      tags: ["React", "WXT", "Chrome extension"],
     },
     {
       title: "Tick",
@@ -36,13 +36,13 @@ export default function Projects() {
         "A subscription tracker app to manage all your subscriptions in one place. Track expenses, visualize your spending habits and categorize them easily.",
       liveLink: "https://tick.shubbu.dev/",
       githubLink: "https://github.com/Shubbu03/tick",
-      tags: ["Next.js", "Cloudinary", "Subscription"],
+      tags: ["Next.js", "Cloudinary", "Subscription tracker"],
     },
   ];
 
   return (
     <>
-      <div className="w-full max-w-2xl mx-auto px-4 pt-16 sm:pt-24 sticky top-0 z-10">
+      <div className="w-full max-w-2xl mx-auto px-4 pt-16 sm:pt-24 sticky top-0 z-10 bg-white dark:bg-black transition-colors duration-300">
         <motion.h1
           className="text-3xl sm:text-4xl font-semibold mb-6 sm:mb-8 text-start text-gray-900 dark:text-white"
           initial={{ opacity: 0, y: -20 }}
