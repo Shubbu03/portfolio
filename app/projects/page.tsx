@@ -22,6 +22,15 @@ export default function Projects() {
       tags: ["Next.js", "Mongodb", "Free writing"],
     },
     {
+      title: "SmartSeek",
+      description:
+        "A Chrome Extension which lets you resume YouTube videos from the exact timestamp, even with history turned off.",
+      liveLink:
+        "https://chromewebstore.google.com/detail/smartseek/doldnfpemfpehgoocdfnimnlndgjjpda",
+      githubLink: "https://github.com/Shubbu03/smartseek-ext",
+      tags: ["React", "WXT", "Chrome Extension"],
+    },
+    {
       title: "Tick",
       description:
         "A subscription tracker app to manage all your subscriptions in one place. Track expenses, visualize your spending habits and categorize them easily.",
