@@ -14,6 +14,13 @@ export default function Projects() {
       tags: ["Next.js", "Supabase", "Second brain"],
     },
     {
+      title: "Ilustraciones",
+      description:
+        "A collaborative space to draw, doodle, and bring ideas to life—together.",
+      githubLink: "https://github.com/Shubbu03/ilustraciones",
+      tags: ["Turborepo", "Websocket", "Collaborative canvas"],
+    },
+    {
       title: "Carta",
       description:
         "A free writing tool — just let your thoughts flow. No structure, no rules — write whatever's on your mind.",
