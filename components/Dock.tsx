@@ -118,7 +118,7 @@ export default function Dock() {
           target="_blank"
         />
         <DockLink
-          href="mailto:thatcoderguyshubham@gmail.com"
+          href="mailto:shubham.sharma.work3@gmail.com"
           label="Email"
           icon={<IconMail size={iconSize} strokeWidth={1.75} />}
         />
