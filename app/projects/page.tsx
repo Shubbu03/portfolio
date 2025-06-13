@@ -24,6 +24,7 @@ export default function Projects() {
       title: "Dinero",
       description:
         "A wallet app where you can send and recieve money to your friends or anyone.",
+      liveLink: "https://dinero.shubbu.dev/",
       githubLink: "https://github.com/Shubbu03/dinero",
       tags: ["Next.js", "Golang", "Fiat wallet"],
     },
