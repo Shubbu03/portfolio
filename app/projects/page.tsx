@@ -21,6 +21,13 @@ export default function Projects() {
       tags: ["Turborepo", "Websocket", "Collaborative canvas"],
     },
     {
+      title: "Dinero",
+      description:
+        "A wallet app where you can send and recieve money to your friends or anyone.",
+      githubLink: "https://github.com/Shubbu03/dinero",
+      tags: ["Next.js", "Golang", "Fiat wallet"],
+    },
+    {
       title: "Carta",
       description:
         "A free writing tool — just let your thoughts flow. No structure, no rules — write whatever's on your mind.",
