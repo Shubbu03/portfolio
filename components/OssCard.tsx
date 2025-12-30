@@ -17,8 +17,6 @@ export type OssContribution = {
     repoUrl?: string;
 };
 
-interface OssCardProps extends OssContribution { }
-
 export default function OssCard({
     org,
     repo,
@@ -28,7 +26,7 @@ export default function OssCard({
     labels = [],
     prUrl,
     repoUrl,
-}: OssCardProps) {
+}: OssContribution) {
     const primaryLink = prUrl || repoUrl || "#";
 
     const statusStyles: Record<OssStatus, string> = {

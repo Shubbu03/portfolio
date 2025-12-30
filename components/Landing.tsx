@@ -35,21 +35,35 @@ export default function Landing() {
         </h1>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-4 text-center px-2">
           {" "}
-          budding developer & designer
+          solana developer & rust native
         </p>
       </div>
 
       <div className="mb-8 text-start w-full max-w-2xl">
         <h2 className="text-lg sm:text-xl font-semibold mb-2">About</h2>
         <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
-          Always curious, always building. Big fan of web dev, blockchains, and
-          the whole Solana scene. Just tryna be 1% better every day and have
-          fun along the way.
+          Building on Solana with Rust, focused on on-chain programs, protocol design, and performance-driven systems. Learning by shipping, breaking things, and refining the details.
         </p>
       </div>
       <div className="mb-8 w-full max-w-2xl">
         <h2 className="text-lg sm:text-xl font-semibold mb-2">Experience</h2>
         <ul className="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+          <li className="mb-1">
+            Learner @{" "}
+            <a
+              href="https://www.turbin3.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block group"
+            >
+              Turbin3
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current group-hover:w-full transition-all duration-300"></span>
+            </a>{" "}
+            <span className="block sm:inline text-xs text-gray-400 sm:ml-1">
+              {" "}
+              Q3 & Q4 2025
+            </span>
+          </li>
           <li className="mb-1">
             Full Stack Dev @{" "}
             <a
@@ -84,12 +98,13 @@ export default function Landing() {
         <h2 className="text-lg sm:text-xl font-semibold mb-2">Skills</h2>
         <div className="flex flex-wrap gap-2 sm:gap-3">
           {[
-            "React",
-            "TypeScript",
-            "Next.js",
-            "Blockchain",
             "Solana",
-            "Web3",
+            "Anchor",
+            "Pinocchio",
+            "LiteSVM",
+            "Rust",
+            "Next.js",
+            "TypeScript",
           ].map((skill) => (
             <span
               key={skill}

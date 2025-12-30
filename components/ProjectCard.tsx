@@ -30,9 +30,9 @@ export default function ProjectCard({
         <div className="flex-1">
           {" "}
           <a
-            href={liveLink || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={liveLink || githubLink || "#"}
+            target={liveLink || githubLink ? "_blank" : undefined}
+            rel={liveLink || githubLink ? "noopener noreferrer" : undefined}
             className="group"
           >
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1 flex items-center">
@@ -41,7 +41,7 @@ export default function ProjectCard({
                 {title}
                 <span className="absolute bottom-0 left-0 h-px bg-current w-0 group-hover:w-full transition-all duration-300 ease-in-out"></span>
               </span>
-              {liveLink && (
+              {(liveLink || githubLink) && (
                 <IconExternalLink
                   size={16}
                   className="ml-2 opacity-70 group-hover:opacity-100 transition-opacity"
