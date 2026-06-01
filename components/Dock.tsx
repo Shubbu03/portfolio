@@ -9,6 +9,7 @@ import {
   IconMail,
   IconMoon,
   IconSun,
+  IconBallpen,
 } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
 
@@ -93,11 +94,11 @@ export default function Dock() {
           label="Home"
           icon={<IconHome size={iconSize} strokeWidth={1.75} />}
         />
-        {/* <DockLink
+         <DockLink
           href="/blogs"
           label="Blogs"
           icon={<IconBallpen size={iconSize} strokeWidth={1.75} />}
-        /> */}
+        /> 
         <DockLink
           href="/pow"
           label="Proof of Work"
