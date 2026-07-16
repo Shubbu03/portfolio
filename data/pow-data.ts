@@ -1,4 +1,8 @@
-import type { OssContribution } from "@/components/OssCard";
+import type {
+	OssContribution,
+	Project,
+	ProjectCategory,
+} from "@/types/portfolio";
 
 export const ossContributions: OssContribution[] = [
 	{
@@ -114,17 +118,7 @@ export const ossContributions: OssContribution[] = [
 	},
 ];
 
-export type ProjectCategory = "web3" | "web2" | "ext";
-export type ProjectSubTab = "web3" | "web2" | "ext";
-
-export interface Project {
-	title: string;
-	description: string;
-	liveLink?: string;
-	githubLink?: string;
-	tags?: string[];
-	category: ProjectCategory;
-}
+export type ProjectSubTab = ProjectCategory;
 
 export const projects: Project[] = [
 	{
@@ -141,7 +135,7 @@ export const projects: Project[] = [
 			"Private payment protocol for Solana using MagicBlock Ephemeral Rollups (ER) for privacy-preserving scheduled payments. Superteam India Grant Recipient.",
 		liveLink: "https://www.npmjs.com/package/@veil-dev/sdk",
 		githubLink: "https://github.com/Shubbu03/veil",
-		tags: ["Ephermeral Rollups", "SDK", "Magicblock"],
+		tags: ["Ephemeral Rollups", "SDK", "MagicBlock"],
 		category: "web3",
 	},
 	{
@@ -149,7 +143,7 @@ export const projects: Project[] = [
 		description:
 			"A secure Solana-powered platform enabling clients to escrow funds and freelancers to receive payments seamlessly with reputation rewards.",
 		githubLink: "https://github.com/Shubbu03/bondr",
-		tags: ["Anchor", "Typescript", "Solana"],
+		tags: ["Anchor", "TypeScript", "Solana"],
 		category: "web3",
 	},
 	{
@@ -165,13 +159,13 @@ export const projects: Project[] = [
 		description:
 			"A collaborative space to draw, doodle, and bring ideas to life—together.",
 		githubLink: "https://github.com/Shubbu03/ilustraciones",
-		tags: ["Turborepo", "Websocket", "Collaborative canvas"],
+		tags: ["Turborepo", "WebSockets", "Collaborative canvas"],
 		category: "web2",
 	},
 	{
 		title: "Dinero",
 		description:
-			"A wallet app where you can send and recieve money to your friends or anyone.",
+			"A wallet app where you can send and receive money to friends or anyone else.",
 		githubLink: "https://github.com/Shubbu03/dinero",
 		tags: ["Next.js", "Golang", "Fiat wallet"],
 		category: "web2",
@@ -182,7 +176,7 @@ export const projects: Project[] = [
 			"A free writing tool — just let your thoughts flow. No structure, no rules — write whatever's on your mind.",
 		liveLink: "https://carta.shubbu.dev/",
 		githubLink: "https://github.com/Shubbu03/carta",
-		tags: ["Next.js", "Mongodb", "Free writing"],
+		tags: ["Next.js", "MongoDB", "Free writing"],
 		category: "web2",
 	},
 	{

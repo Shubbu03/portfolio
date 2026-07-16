@@ -1,21 +1,8 @@
 "use client";
 
-import type React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
-
-export type OssStatus = "merged" | "open";
-
-export type OssContribution = {
-    org: string;
-    repo: string;
-    title: string;
-    date?: string;
-    status: OssStatus;
-    labels?: string[];
-    prUrl?: string;
-    repoUrl?: string;
-};
+import type { OssContribution, OssStatus } from "@/types/portfolio";
 
 export default function OssCard({
     org,
@@ -27,6 +14,7 @@ export default function OssCard({
     prUrl,
     repoUrl,
 }: OssContribution) {
+    const shouldReduceMotion = useReducedMotion();
     const primaryLink = prUrl || repoUrl || "#";
 
     const statusStyles: Record<OssStatus, string> = {
@@ -42,11 +30,11 @@ export default function OssCard({
     };
 
     return (
-        <motion.div
+        <motion.article
             className="w-full py-5"
-            initial={{ opacity: 0, y: 16 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.35 }}
         >
             <div className="flex flex-col space-y-2">
                 <div className="flex items-start justify-between gap-3">
@@ -64,26 +52,25 @@ export default function OssCard({
                     </span>
                 </div>
 
-                <a
+                {primaryLink !== "#" ? <a
                     href={primaryLink}
-                    target={primaryLink.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                        primaryLink.startsWith("http")
-                            ? "noopener noreferrer"
-                            : undefined
-                    }
-                    className="group inline-flex items-start gap-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-start gap-1 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black"
                 >
                     <h3 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white leading-snug">
                         {title}
                     </h3>
-                    {primaryLink !== "#" && (
-                        <IconExternalLink
-                            size={14}
-                            className="mt-0.5 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                        />
-                    )}
-                </a>
+                    <IconExternalLink
+                        size={14}
+                        aria-hidden="true"
+                        className="mt-0.5 text-gray-400 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-200"
+                    />
+                </a> : (
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white leading-snug">
+                        {title}
+                    </h3>
+                )}
 
                 <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] sm:text-xs text-gray-500 dark:text-gray-400">
                     {date && (
@@ -93,7 +80,7 @@ export default function OssCard({
                     )}
 
                     {date && labels.length > 0 && (
-                        <span className="text-gray-400 dark:text-gray-600">•</span>
+                        <span aria-hidden="true" className="text-gray-400 dark:text-gray-600">•</span>
                     )}
 
                     {labels.length > 0 && (
@@ -111,16 +98,16 @@ export default function OssCard({
 
                     {repoUrl && (
                         <>
-                            <span className="text-gray-300 dark:text-gray-600">|</span>
+                            <span aria-hidden="true" className="text-gray-300 dark:text-gray-600">|</span>
                             <div className="flex items-center gap-1">
                                 <a
                                     href={repoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="View repository on GitHub"
-                                    className="flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-800/80 dark:hover:text-gray-100 transition-colors"
+                                    aria-label={`View ${org}/${repo} repository on GitHub`}
+                                    className="flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-800/80 dark:hover:text-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                                 >
-                                    <IconBrandGithub size={12} />
+                                    <IconBrandGithub size={12} aria-hidden="true" />
                                     <span>repo</span>
                                 </a>
                             </div>
@@ -128,8 +115,6 @@ export default function OssCard({
                     )}
                 </div>
             </div>
-        </motion.div>
+        </motion.article>
     );
 }
-
-
