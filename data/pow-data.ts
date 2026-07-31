@@ -190,6 +190,16 @@ export const projects: Project[] = [
 		category: "ext",
 	},
 	{
+		title: "CourClock",
+		description:
+			"A lightweight Chrome Extension for tracking upcoming anime episodes, browsing recent airings, and receiving reminders before airtime.",
+		liveLink:
+			"https://chromewebstore.google.com/detail/courclock/eahkdaehebenhndgmplpdfnncijhjiaa",
+		githubLink: "https://github.com/Shubbu03/courclock",
+		tags: ["React", "WXT", "Chrome extension"],
+		category: "ext",
+	},
+	{
 		title: "Tick",
 		description:
 			"A subscription tracker app to manage all your subscriptions in one place. Track expenses, visualize your spending habits and categorize them easily.",
