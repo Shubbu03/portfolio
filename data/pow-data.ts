@@ -133,7 +133,6 @@ export const projects: Project[] = [
 		title: "Veil",
 		description:
 			"Private payment protocol for Solana using MagicBlock Ephemeral Rollups (ER) for privacy-preserving scheduled payments. Superteam India Grant Recipient.",
-		liveLink: "https://www.npmjs.com/package/@veil-dev/sdk",
 		githubLink: "https://github.com/Shubbu03/veil",
 		tags: ["Ephemeral Rollups", "SDK", "MagicBlock"],
 		category: "web3",
@@ -147,11 +146,20 @@ export const projects: Project[] = [
 		category: "web3",
 	},
 	{
+		title: "CascadeHook",
+		description:
+			"A durable event delivery platform for reliable outbound webhooks, with idempotent ingestion, bounded retries, dead-letter handling, tenant isolation, and complete delivery history.",
+		githubLink: "https://github.com/Shubbu03/cascadehook",
+		tags: ["TypeScript", "NestJS", "PostgreSQL", "BullMQ"],
+		category: "web2",
+	},
+	{
 		title: "Cerebero",
 		description:
-			"Your second brain, where all your thoughts live together. Organize notes, collect links, and never lose an idea again.",
+			"A private personal library for saving links and Markdown notes, organizing them with tags, and finding them quickly.",
+		liveLink: "https://cerebero.shubbu.dev/",
 		githubLink: "https://github.com/Shubbu03/cerebero",
-		tags: ["Next.js", "Supabase", "Second brain"],
+		tags: ["React", "Hono", "PostgreSQL"],
 		category: "web2",
 	},
 	{
