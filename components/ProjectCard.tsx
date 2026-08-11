@@ -1,6 +1,6 @@
 "use client";
 
-import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
+import { ArrowSquareOutIcon, GithubLogoIcon } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "framer-motion";
 
 interface ProjectCardProps {
@@ -29,8 +29,9 @@ export default function ProjectCard({
 				)}
 			</span>
 			{primaryLink && (
-				<IconExternalLink
+				<ArrowSquareOutIcon
 					size={16}
+					weight="regular"
 					aria-hidden="true"
 					className="ml-2 opacity-70 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity"
 				/>
@@ -72,8 +73,9 @@ export default function ProjectCard({
 							aria-label={`View ${title} repository on GitHub`}
 							className="block p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
 						>
-							<IconBrandGithub
+							<GithubLogoIcon
 								size={16}
+								weight="regular"
 								aria-hidden="true"
 								className="text-gray-700 dark:text-gray-300"
 							/>

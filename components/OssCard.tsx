@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
+import { ArrowSquareOutIcon, GithubLogoIcon } from "@phosphor-icons/react";
 import type { OssContribution, OssStatus } from "@/types/portfolio";
 
 export default function OssCard({
@@ -61,8 +61,9 @@ export default function OssCard({
                     <h3 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white leading-snug">
                         {title}
                     </h3>
-                    <IconExternalLink
+                    <ArrowSquareOutIcon
                         size={14}
+                        weight="regular"
                         aria-hidden="true"
                         className="mt-0.5 text-gray-400 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-200"
                     />
@@ -107,7 +108,7 @@ export default function OssCard({
                                     aria-label={`View ${org}/${repo} repository on GitHub`}
                                     className="flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[10px] text-gray-500 hover:bg-gray-100 hover:text-gray-800 dark:text-gray-400 dark:hover:bg-gray-800/80 dark:hover:text-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                                 >
-                                    <IconBrandGithub size={12} aria-hidden="true" />
+                                    <GithubLogoIcon size={12} weight="regular" aria-hidden="true" />
                                     <span>repo</span>
                                 </a>
                             </div>

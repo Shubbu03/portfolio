@@ -1,20 +1,20 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-	IconBallpen,
-	IconBrandGithub,
-	IconBrandX,
-	IconBriefcase,
-	IconFileCv,
-	IconHome,
-	IconMail,
-	IconMoon,
-	IconSun,
-} from "@tabler/icons-react";
+	BriefcaseIcon,
+	EnvelopeSimpleIcon,
+	FilePdfIcon,
+	GithubLogoIcon,
+	HouseIcon,
+	MoonIcon,
+	PenNibIcon,
+	SunIcon,
+	XLogoIcon,
+} from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
 import { resumeFile } from "@/lib/resume";
 
@@ -33,6 +33,16 @@ interface DockButtonProps {
 
 const focusRing =
 	"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900";
+
+const subscribeToClientState = () => () => {};
+
+function getClientSnapshot() {
+	return true;
+}
+
+function getServerSnapshot() {
+	return false;
+}
 
 function DockTooltip({
 	label,
@@ -133,7 +143,7 @@ function DockButton({ label, onClick, icon }: DockButtonProps) {
 				onFocus={() => setIsTooltipVisible(true)}
 				onBlur={() => setIsTooltipVisible(false)}
 				aria-label={label}
-				className={`flex items-center justify-center rounded-full p-2 text-gray-300 transition-colors duration-200 hover:bg-white/10 hover:text-white ${focusRing}`}
+				className={`flex cursor-pointer items-center justify-center rounded-full p-2 text-gray-300 transition-colors duration-200 hover:bg-white/10 hover:text-white ${focusRing}`}
 			>
 				<span
 					aria-hidden="true"
@@ -153,11 +163,11 @@ function Separator() {
 
 export default function Dock() {
 	const { resolvedTheme, setTheme } = useTheme();
-	const [isMounted, setIsMounted] = useState(false);
-
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
+	const isMounted = useSyncExternalStore(
+		subscribeToClientState,
+		getClientSnapshot,
+		getServerSnapshot,
+	);
 
 	if (!isMounted) return null;
 
@@ -174,40 +184,40 @@ export default function Dock() {
 				<DockLink
 					href="/"
 					label="Home"
-					icon={<IconHome size={iconSize} strokeWidth={1.75} />}
+					icon={<HouseIcon size={iconSize} weight="regular" />}
 				/>
 				<DockLink
 					href="/blogs"
 					label="Blogs"
-					icon={<IconBallpen size={iconSize} strokeWidth={1.75} />}
+					icon={<PenNibIcon size={iconSize} weight="regular" />}
 				/>
 				<DockLink
 					href="/pow"
 					label="Proof of Work"
-					icon={<IconBriefcase size={iconSize} strokeWidth={1.75} />}
+					icon={<BriefcaseIcon size={iconSize} weight="regular" />}
 				/>
 				<Separator />
 				<DockLink
 					href="https://github.com/Shubbu03"
 					label="GitHub"
-					icon={<IconBrandGithub size={iconSize} strokeWidth={1.75} />}
+					icon={<GithubLogoIcon size={iconSize} weight="regular" />}
 					target="_blank"
 				/>
 				<DockLink
 					href="https://x.com/blackbaloon03"
 					label="X"
-					icon={<IconBrandX size={iconSize} strokeWidth={1.75} />}
+					icon={<XLogoIcon size={iconSize} weight="regular" />}
 					target="_blank"
 				/>
 				<DockLink
 					href="mailto:shubham.sharma.work3@gmail.com"
 					label="Email"
-					icon={<IconMail size={iconSize} strokeWidth={1.75} />}
+					icon={<EnvelopeSimpleIcon size={iconSize} weight="regular" />}
 				/>
 				<DockLink
 					href={resumeFile.href}
 					label="Resume"
-					icon={<IconFileCv size={iconSize} strokeWidth={1.75} />}
+					icon={<FilePdfIcon size={iconSize} weight="regular" />}
 					target="_blank"
 				/>
 				<Separator />
@@ -216,9 +226,9 @@ export default function Dock() {
 					onClick={() => setTheme(isDark ? "light" : "dark")}
 					icon={
 						isDark ? (
-							<IconSun size={iconSize} strokeWidth={1.5} />
+							<SunIcon size={iconSize} weight="regular" />
 						) : (
-							<IconMoon size={iconSize} strokeWidth={1.5} />
+							<MoonIcon size={iconSize} weight="regular" />
 						)
 					}
 				/>

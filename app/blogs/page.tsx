@@ -1,4 +1,4 @@
-import { IconBrandX, IconExternalLink } from "@tabler/icons-react";
+import { ArrowSquareOutIcon, XLogoIcon } from "@phosphor-icons/react/ssr";
 import { blogPosts } from "@/data/site-data";
 
 export default function Blogs() {
@@ -21,7 +21,7 @@ export default function Blogs() {
 								className="group block rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-black"
 							>
 								<div className="mb-2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-									<IconBrandX size={14} aria-hidden="true" />
+									<XLogoIcon size={14} weight="regular" aria-hidden="true" />
 									<span>{post.author}</span>
 									<span aria-hidden="true" className="text-gray-300 dark:text-gray-600">|</span>
 									<time dateTime={post.dateTime}>{post.date}</time>
@@ -31,8 +31,9 @@ export default function Blogs() {
 										{post.title}
 										<span className="absolute bottom-0 left-0 h-px w-0 bg-current transition-all duration-300 ease-in-out group-hover:w-full group-focus-visible:w-full" />
 									</span>
-									<IconExternalLink
+									<ArrowSquareOutIcon
 										size={15}
+										weight="regular"
 										aria-hidden="true"
 										className="ml-2 opacity-70 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
 									/>
