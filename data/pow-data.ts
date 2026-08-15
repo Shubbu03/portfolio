@@ -214,7 +214,7 @@ export const projects: Project[] = [
 		liveLink:
 			"https://chromewebstore.google.com/detail/cerebero/fogaonimhhllcpcpjnggeoghcbbdoelc",
 		githubLink: "https://github.com/Shubbu03/cerebero",
-		tags: ["WXT", "React", "TypeScript"],
+		tags: ["WXT", "React", "Chrome extension"],
 		category: "ext",
 	},
 	{
