@@ -208,6 +208,16 @@ export const projects: Project[] = [
 		category: "ext",
 	},
 	{
+		title: "Cerebero Companion Extension",
+		description:
+			"Save any webpage directly to your private Cerebero Library from the extension popup or right-click menu.",
+		liveLink:
+			"https://chromewebstore.google.com/detail/cerebero/fogaonimhhllcpcpjnggeoghcbbdoelc",
+		githubLink: "https://github.com/Shubbu03/cerebero",
+		tags: ["WXT", "React", "TypeScript"],
+		category: "ext",
+	},
+	{
 		title: "Tick",
 		description:
 			"A subscription tracker app to manage all your subscriptions in one place. Track expenses, visualize your spending habits and categorize them easily.",
