@@ -163,6 +163,15 @@ export const projects: Project[] = [
 		category: "web2",
 	},
 	{
+		title: "Antriksh Daily",
+		description:
+			"A focused news and company intelligence feed covering India’s private space industry, with automated updates from trusted news sources and company newsrooms.",
+		liveLink: "https://antrikshdaily.vercel.app/",
+		githubLink: "https://github.com/Shubbu03/antrikshdaily",
+		tags: ["Next.js", "Drizzle", "PostgreSQL"],
+		category: "web2",
+	},
+	{
 		title: "Ilustraciones",
 		description:
 			"A collaborative space to draw, doodle, and bring ideas to life—together.",
