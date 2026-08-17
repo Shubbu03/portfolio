@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { siteConfig } from "@/lib/site";
 import Dock from "../components/Dock";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -80,7 +80,7 @@ export default function RootLayout({
 					</main>
 					<Dock />
 				</ThemeProvider>
-				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
