@@ -6,6 +6,16 @@ import type {
 
 export const ossContributions: OssContribution[] = [
 	{
+		org: "shipwright-io",
+		repo: "build",
+		title: "Fix duplicate environment variables in MergeEnvVars #2338",
+		date: "Sep 2026",
+		status: "merged",
+		labels: ["bug", "go", "tests"],
+		prUrl: "https://github.com/shipwright-io/build/pull/2338",
+		repoUrl: "https://github.com/shipwright-io/build",
+	},
+	{
 		org: "magicblock-labs",
 		repo: "magicblock-validator",
 		title: "feat: add magic router-compatible RPC methods to validator #704",
